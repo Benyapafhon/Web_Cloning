@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+<body>
+    <div class="promo-banner">
+        <p>Buy a Vinopure Serum = enjoy a free Purifying Gel Cleanser!</p>
+    </div>
+
+    <!-- <div aria-hidden="true" class="AvatarIcon_module_avatarIcon_LmF2Y_1744123903414 Badge_module_badge_LyoqI_1744123903414 BadgeNotification_module_badge_LyoqI_1744123903414" style="background-color: rgb(45, 25, 70); min-width: 50px; width: 50px; height: 50px; border-radius: 50%;"><svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d="M26 7C14.972 7 6 15.076 6 25c0 3.47 1.082 6.784 3.146 9.672L4 43h22c11.028 0 20-8.076 20-18S37.028 7 26 7" fill="white"></path></svg></div> -->
+    <!-- แถบโลโก้ + เมนู -->
+    <div class="navbar sticky">
+        <div class="left-icons">
+            <div class="burger hidden-com">
+                <img src="image/burger.png" alt="">
+            </div>
+            <div class="phone hidden-phone">
+                <img src="image/phone.png" alt="phone">
+            </div>
+            
+            <div class="location-icon hidden-phone">
+                <img src="image/pin.png" alt="location">
+            </div>
+
+            <div class="search-bar hidden-phone">
+                <input type="text" class="search-input" placeholder="Search for items">
+            </div>
+
+            <div class="search-icon">
+                <img src="image/search-interface-symbol.png" alt="search">
+            </div>
+            
+        </div>
+        <div class="logo">
+            <!-- <img src="image/logo.png" alt="logo"> -->
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-name="Calque 1" viewBox="0 0 240.88 49.98" id="logo" class="h-[35px] md:h-[45px] mb-[7px]" title="Caudalie" fill="#2d1946"><path d="M223.61 46.38V29.79l12.75.46 1.33-3.38h-14.07V15.08h6.63c3.52 0 4.61.09 7.4.96l1.6.5-.5-4.57H217.6l.32 1.19c.32 1.19.59 3.15.59 5.53v24.03c0 2.42-.14 4.16-.5 5.57l-.32 1.19h22.48l.73-4.71-1.46.55c-1.55.59-4.61 1.05-7.45 1.05h-8.36ZM212.46.87c0-.27 0-.5-.04-.78-.23-.05-.5-.09-.73-.09-4.2 0-7.27 2.92-7.27 7.17 0 .27 0 .5.05.78.23.05.5.09.73.09 4.2 0 7.26-2.97 7.26-7.17m-7.58 17.82v24.03c0 2.42-.23 4.16-.59 5.57l-.32 1.19h6.95l-.32-1.19c-.37-1.42-.59-3.15-.59-5.57V18.73c0-2.42.23-4.16.59-5.57l.32-1.19h-6.95l.32 1.19c.37 1.42.59 3.15.59 5.53m-6.99 30.79.96-4.71-1.42.46c-1.65.55-4.57 1.14-8.59 1.14h-5.21V18.68c0-2.42.18-4.16.55-5.53l.32-1.19h-6.95l.32 1.19c.37 1.42.64 3.15.64 5.53v24.35c0 3.02-.14 4.16-.5 5.44l-.28 1.01h20.15Zm-30.89 0h7.17l-.96-1.42c-1.23-1.83-2.61-4.2-3.88-7.22l-12.38-29.61h-1.1l-13.07 29.93c-1.46 3.34-2.33 5.21-3.43 6.85l-.96 1.46h4.84c.78-2.28 1.69-4.61 2.65-6.9l2.65-6.35h13.3l2.33 5.67c1.05 2.51 1.97 5.07 2.83 7.58Zm-6.35-16.08h-10.92l5.48-13.07zm-21.79-3.24c0-10.37-7.45-18.18-19.19-18.18h-12.15l.32 1.19c.37 1.42.59 3.15.59 5.53v24.35c0 3.02-.18 4.16-.55 5.44l-.27 1.01h12.61c12.11 0 18.64-9.87 18.64-19.33Zm-4.94 2.06c0 8.41-5.39 14.16-13.48 14.16h-6.9v-31.3h5.3c8.82 0 15.08 6.08 15.08 17.13Zm-32.53-19.05.32-1.19h-4.93l.32 1.19c.37 1.42.64 3.15.64 5.53v16.86c0 6.4-4.16 10.33-10.14 10.33s-9.73-3.84-9.73-10.33V18.7c0-2.42.18-4.16.55-5.53l.32-1.19H71.8l.32 1.19c.37 1.42.64 3.15.64 5.53v17.41c0 8.54 5.85 13.89 14.07 13.89s14.03-5.35 14.03-14.35V18.7c0-2.42.18-4.16.55-5.53ZM63.74 49.49h7.17l-.96-1.42c-1.23-1.83-2.6-4.2-3.88-7.22L53.69 11.24h-1.1L39.52 41.17c-1.46 3.34-2.33 5.21-3.43 6.85l-.96 1.46h4.84c.78-2.28 1.69-4.61 2.65-6.9l2.65-6.35h13.3l2.33 5.67c1.05 2.51 1.96 5.07 2.83 7.58Zm-6.35-16.08H46.47l5.48-13.07zM5.35 29.66c0-8.59 6.03-15.26 14.35-15.26 4.52 0 7.81 2.79 10.69 6.76l1.19 1.64-.27-8.22c-3.24-2.01-6.99-3.29-11.61-3.29C8.96 11.29 0 20.7 0 31.53s7.9 18.46 19.1 18.46c4.71 0 8.96-1.33 11.93-3.29l.91-6.94-2.15 2.51c-2.51 2.97-5.25 4.8-10.1 4.8-7.72 0-14.35-6.81-14.35-17.41Z" class="cls-1"></path></svg>
+        </div>
+        <div class="right-icons">
+            <div class="account">
+                <img src="image/account.png" alt="account">
+                <span class="hidden-phone">My account</span>
+            </div>
+            <div class="cart">
+                <img src="image/shopping-bag.png" alt="cart">
+                <span class="hidden-phone">Cart</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- เมนูย่อย -->
+    <div class="submenu hidden-phone">
+        <div ><a id="suncare-select" href="#">Suncare selection ☀︎</a></div>
+        <div><a href="#">Shop</a></div>
+        <div><a href="#">New</a></div>
+        <div><a href="#">Best-sellers</a></div>
+        <div><a href="#">Gifts & offers</a></div>
+        <div><a href="#">Needs</a></div>
+        <div><a href="#">Spa & events</a></div>
+        <div><a href="#">Why Caudalie</a></div>
+    </div>
+    <div class="bigpic">
+        <div class="com-bigpic hidden-phone">
+            <div class="text-at-pic">
+                <p>Vinoperfect Serum</p>
+                <h1>Brightens all dark spots</h1>
+                <button class="bigpic-but">Discover</button>
+            </div>
+        </div>
+    
+        <div class="media-bigpic hidden-com">
+            <img src="image/bigpicmobile.png" alt="">
+            <div class="text-under-pic">
+                <p>Vinoperfect Serum</p>
+                <h1>Brightens all dark spots</h1>
+                <button class="bigpic-but">Discover</button>
+            </div>
+    </div>
+        
+    </div>
+
+    <div class="topictext">
+        <h1>Treat yourself to your skincare favourites</h1>
+    </div>
+
+    <div class="bank-holiday_pic">
+        <div class="product">
+            <img class="main-img" src="productpic/img1.png" alt="img1">
+            <img class="hover-img" src="productpic/hooverimg1.png" alt="img1-hover">
+            
+            <div class="product_name">
+                <p id="name">Vinoperfect</p>
+                <p id="info">Dark-spot Correcting Summer Duo</p>
+            </div>
+
+            <div class="star-icon">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <p id="rate">(1048)</p>
+            </div>
+
+            <div class="price">
+                <p id="price">€52.00</p>
+            </div>
+
+            <div class="button-add-to-bag">
+                <button class="add-to-bag-button">
+                    <p id="add-to-bag">Add to bag</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="main-img" src="productpic/img2.png" alt="img2">
+            <img class="hover-img" src="productpic/hooverimg2.png" alt="img2-hover">
+            
+            <div class="product_name">
+                <p id="name">Vinoperfect</p>
+                <p id="info">Instant Brightening Moisturiser</p>
+            </div>
+
+            <div class="star-icon">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <p id="rate">(969)</p>
+            </div>
+
+            <div class="price">
+                <p id="price">€42.00</p>
+            </div>
+
+            <div class="button-add-to-bag">
+                <button class="add-to-bag-button">
+                    <p id="add-to-bag">Add to bag</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="main-img" src="productpic/img4.png" alt="img4">
+            <img class="hover-img" src="productpic/hooverimg4.png" alt="img4-hover">
+            
+            <div class="product_name">
+                <p id="name">Vinoperfect</p>
+                <p id="info">Dark-spot Correcting Glycolic Night Cream - Refill</p>
+            </div>
+
+            <div class="star-icon">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <p id="rate">(330)</p>
+            </div>
+
+            <div class="price">
+                <p id="price">€42.00</p>
+            </div>
+
+            <div class="button-add-to-bag">
+                <button class="add-to-bag-button">
+                    <p id="add-to-bag">Add to bag</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="main-img" src="productpic/img5.png" alt="img5">
+            <img class="hover-img" src="productpic/hooverimg5.png" alt="img5-hover">
+            
+            <div class="product_name">
+                <p id="name">Vinoperfect</p>
+                <p id="info">Dark-spot Correcting Glycolic Night Cream - Refill</p>
+            </div>
+
+            <div class="star-icon">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <p id="rate">(333)</p>
+            </div>
+
+            <div class="price">
+                <p id="price">€36.00</p>
+            </div>
+
+            <div class="button-add-to-bag">
+                <button class="add-to-bag-button">
+                    <p id="add-to-bag">Add to bag</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="main-img" src="productpic/img6.png" alt="img6">
+            <img class="hover-img" src="productpic/hooverimg6.png" alt="img6-hover">
+            
+            <div class="product_name">
+                <p id="name">Vinoperfect</p>
+                <p id="info">Dark Circle Brightening Eye Cream With Niacinamide</p>
+            </div>
+
+            <div class="star-icon">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <p id="rate">(461)</p>
+            </div>
+
+            <div class="price">
+                <p id="price">€34.00</p>
+            </div>
+
+            <div class="button-add-to-bag">
+                <button class="add-to-bag-button">
+                    <p id="add-to-bag">Add to bag</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="main-img" src="productpic/img7.png" alt="img7">
+            <img class="hover-img" src="productpic/hooverimg7.png" alt="img7-hover">
+            
+            <div class="product_name">
+                <p id="name">Vinoperfect</p>
+                <p id="info">Vinoperfect Brightening AHA Micropeel</p>
+            </div>
+
+            <div class="star-icon">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <p id="rate">(45)</p>
+            </div>
+
+            <div class="price">
+                <p id="price">€42.00</p>
+            </div>
+
+            <div class="button-add-to-bag">
+                <button class="add-to-bag-button">
+                    <p id="add-to-bag">Add to bag</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img class="main-img" src="productpic/img8.png" alt="img8">
+            <img class="hover-img" src="productpic/hooverimg8.png" alt="img8-hover">
+            
+            <div class="product_name">
+                <p id="name">Vinoperfect</p>
+                <p id="info">Radiance And Anti-dark Spot Routine</p>
+            </div>
+
+            <div class="star-icon">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <p id="rate">(499)</p>
+            </div>
+
+            <div class="price">
+                <p id="price">€134.00</p>
+            </div>
+
+            <div class="button-add-to-bag">
+                <button class="add-to-bag-button">
+                    <p id="add-to-bag">Add to bag</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="carousel hidden-com" data-flickity='{ "prevNextButtons" : false, "contain" : true }'>	
+        <div class="carousel-cell">
+            <img src="piccode/rituel.png" alt="Image 1">
+            <div class="carousel-info">
+                <div class="carousel-text">
+                    <h2>A sensory break</h2>
+                    <p> free Moisturizing Oil Elixir and a Thé des Vignes Shower Gel when you spend 79€.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-cell">
+            <img src="piccode/facewash2.png" alt="Image 2">
+        </div>
+    </div>
+
+
+
+
+
+    <div class="promo-section">
+        <div class="promo-box hidden-phone">
+        <img id="img-hover" src="piccode/rituel.png" alt="Rituel Offer">
+        <div class="promo-content">
+            <h3>A sensory break</h3>
+            <p>A free Moisturizing Oil Elixir and a Thé des Vignes Shower Gel when you spend 79€.</p>
+            <br>
+            <span>
+                <p>
+                    <b>
+                        Code: RITUEL
+                    </b>
+                </p>
+            </span>
+            <button ><p>Shop now</p></button>
+        </div>
+        </div>
+
+        <div class="promo-box hidden-phone">
+        <img id ="img-hover" src="piccode/facewash2.png" alt="Facewash Offer">
+        <div class="promo-content">
+            <h3>Anti-blemish Offer</h3>
+            <p>A free Purifying Gel Cleanser 75ml when you buy a Vinopure Serum*</p>
+            <button ><p>Shop now</p></button>
+        </div>
+        </div>
+    </div>
+
+    <div class="grape-power">
+        <div class="grape-power-left">
+            <p>Discover our cults</p>
+            <hr>
+            <h3>"Powered by the grape.Patented,highly effective,natural formulas."</h3>
+            <button id="shop-but">
+                <p>Shop now</p>  
+            </button>
+        </div>
+        <div class="grape-power-right">
+            <img src="grapeproduct/grape1.png" alt="grape1">
+            <img src="grapeproduct/grape2.png" alt="grape2">
+            <img src="grapeproduct/grape3.png" alt="grape3">
+            <img src="grapeproduct/grape4.png" alt="grape4">
+            <img src="grapeproduct/grape5.png" alt="grape5">
+        </div>
+    </div>
+    <!-- <div class="discover">
+        <img id="img-left" src="discoverimg/discoverimg1.png" alt="disimg1">
+        <img id="img-right" src="discoverimg/discoverimg2.png" alt="disimg2">
+        <div class="discover-left">
+            <h3>Join the loyalty program</h3>
+            <p>Earn points with every purchase to redeem FREE full-size products from just 100 points!</p>
+            <button>
+                <p>Discover</p>  
+            </button>
+        </div>
+        <div class="discover-right">
+            <h3>Event Locator</h3>
+            <p>Meet our Brand Experts at one of our Beauty Consultation Events!</p>
+            <button >
+                <p>Discover</p>  
+            </button>
+        </div> 
+    </div> -->
+    <div class="discover-section">
+        <div class="discover-box">
+            <img id="img-hover" src="discoverimg/discoverimg1.png" alt="disimg1">
+            <div class="discover-content">
+                <h3>Join the loyalty program</h3>
+                <p>Earn points with every purchase to redeem FREE full-size products from just 100 points!</p>
+                <button><p>Discover</p></button>
+            </div>
+        </div>
+        <div class="discover-box">
+            <img id="img-hover" src="discoverimg/discoverimg2.png" alt="disimg2">
+            <div class="discover-content">
+                <h3>Event Locator</h3>
+                <p>Meet our Brand Experts at one of our Beauty Consultation Events!</p>
+                <button><p>Discover</p></button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="brand-value">
+        <div class="brand-value-top">
+            <h2>Brand values</h2>
+            <button class="but1 hidden-phone">
+                <p id="shop-now-txt">Discover</p>
+            </button>
+
+        </div>
+        <div class="brand-icon">
+            <div class="brand-value-pic hidden-phone">
+                <img class="brand-pic" src="brandvalue/brandvalue1.png" alt="brandvalue1">
+                <img class="brand-pic" src="brandvalue/brandvalue2.png" alt="brandvalue2">
+                
+                <img class="brand-pic" src="brandvalue/brandvalue4.png" alt="brandvalue4">
+            </div>
+
+            <div class="brand-value-pic hidden-com">
+                <img class="brand-pic" src="brandvalue/brandvalue1.png" alt="brandvalue1">
+                <img class="brand-pic" src="brandvalue/brandvalue2.png" alt="brandvalue2">
+                <img class="brand-pic" src="brandvalue/brandvalue3.png" alt="brandvalue3">
+                <img class="brand-pic" src="brandvalue/brandvalue4.png" alt="brandvalue4">
+            </div>            
+            <button class="but2 hidden-com">
+                <p id="shop-now-txt">Discover</p>
+            </button>
+        </div>
+    </div>
+    <div class="story">
+        <div class="story-txt">
+            <h1>Beauty from the vine</h1>
+            <p>It all began in Bordeaux, in the heart of the vines at Château Smith Haut Lafitte. Since 1995, Caudalie has concentrated all the exceptional powers of the vine and grapes in patented formulas, for highly effective, natural and more sustainable skincare products.</p>
+            <div>
+                <button class="discover-but">
+                    <p id="discover">Discover our story</p>
+                </button>
+            </div>
+        </div>
+        <img  class="hidden-com" src="storyimg/phone-grape.png" style="width:100%; height: auto;" >
+        <img  class="hidden-phone" src="storyimg/storyimg.png" style="width:100%; height: auto;" >
+    </div>
+    <div class="follow-us">
+        <div class="follow-us-txt">
+            <h4>Follow us on Instagram</h4>
+            <button class="follow-but1 hidden-phone">
+                Follow us on Instagram &nbsp; &nbsp; &nbsp;
+                <img src="icon/instagram.png" alt="ig">
+            </button>
+        </div>
+        <div class="follow-us-pic">
+            <img src="followus/followuspic1.png" alt="followuspic1">
+            <img src="followus/followuspic2.png" alt="followuspic2">
+            <img src="followus/followuspic3.png" alt="followuspic3">
+            <img src="followus/followuspic4.png" alt="followuspic4">
+            <img src="followus/followuspic5.png" alt="followuspic5">
+            <img src="followus/followuspic6.png" alt="followuspic6">
+        </div>
+        <button class="follow-but2 hidden-com">
+            Follow us on Instagram &nbsp; &nbsp; &nbsp;
+            <img src="icon/instagram.png" alt="ig"> 
+        </button>
+        <div class="bottom-line">
+            <hr id="line">
+        </div>
+    </div>
+    <div class="description">
+        <div class="desc-topic">
+            <h2>Our natural skincare to pamper your skin</h2>
+        </div>
+        <div class="paragraph hidden-com">
+            <p>At Caudalie, we believe in the power of Nature to provide the best skincare for your skin: the most effective, the most natural, the cleanest and the most <br>sustainable. That's why all our skincare products are formulated with at least 95% natural origin ingredients (1), carefully selected to deliver results that can <br>be seen, while respecting your skin. </p>           
+            <p>All of our skincare products are created in France at our Natural Formulation Laboratory. Our team of formulators surpass themselves every day to create a <br>new generation of highly natural skincare. All Caudalie products follow a very strict naturality charter which is improved every year, for cosmetics that are <br>ever more sustainable and natural. Whether you're looking for a day cream, cleansing gel or face serum, at Caudalie, you'll find the skincare product that<br> meets your skin's needs. </p>
+            <p>Our unique, innovative formulas are designed using patented ingredients, developed with the best anti-ageing research labs, for visible, lasting results.<br>Experience the perfect combination of science and the power of ingredients from the vine with our natural beauty products.<br> Discover our emblematic natural skincare collections and reveal your beauty. </p>
+        </div>
+        <!-- <div class="paragraph hidden-phone">
+            <p>At Caudalie, we believe in the power of Nature to provide the best skincare for your skin: the most effective, the most natural, the cleanest and the most sustainable. That's why all our skincare <br> products are formulated with at least 95% natural origin ingredients (1), carefully selected to deliver results that can <br>be seen, while respecting your skin. </p>           
+            <p>All of our skincare products are created in France at our Natural Formulation Laboratory. Our team of formulators surpass themselves every day to create a <br>new generation of highly natural skincare. All Caudalie products follow a very strict naturality charter which is improved every year, for cosmetics that are <br>ever more sustainable and natural. Whether you're looking for a day cream, cleansing gel or face serum, at Caudalie, you'll find the skincare product that<br> meets your skin's needs. </p>
+            <p>Our unique, innovative formulas are designed using patented ingredients, developed with the best anti-ageing research labs, for visible, lasting results.<br>Experience the perfect combination of science and the power of ingredients from the vine with our natural beauty products.<br> Discover our emblematic natural skincare collections and reveal your beauty. </p>
+        </div> -->
+    <div class="exception">
+        <p>(1) Except Suncare and Fresh Fragrances</p>
+    </div>
+    </div>
+    </div>
+    <!-- <div class="benefit">
+        <h3>Your permanent benefits</h3>
+        <div class="box">
+            <div class="deliver">
+                <img src="benefit/delivery.png" alt="delivery">
+                <p id="bold-txt-bene">Free deliver</p>
+                <p id="lighter-txt-bene">over €39*</p>
+            </div>
+            <div class="travelsize">
+                <img src="benefit/travelsize.png" alt="travelsize">
+                <p id="bold-txt-bene">A FREE travel-size product of yur choice</p>
+                <p id="lighter-txt-bene">when you spend €59</p>
+            </div>
+            <div class="points">
+                <img src="benefit/point.png" alt="point">
+                <p id="bold-txt-bene">MYCAUDALLIE layalty program</p>
+                <p id="lighter-txt-bene">100 points = 1 gift</p>
+            </div>
+            <div class="gift">
+                <img src="benefit/gift.png" alt="gift">
+                <p id="bold-txt-bene">Exclusive offers</p>
+                <p id="lighter-txt-bene">all year round</p>
+            </div>
+        </div>
+    </div> -->
+    <div class="benefits-section">
+        <h2 class="benefits-title">Your permanent benefits</h2>
+        <div class="benefits-container">
+            <div class="benefit-box">
+                <a href=#free-delivery">
+                    <svg viewBox="0 0 58.01 30.81" xmlns="http://www.w3.org/2000/svg" data-name="Calque 1">
+                        <path d="M7.8,14.3H2.3c-.1,0-.1,.1-.1,.3s0,.3,.1,.3H7.8c.1,0,.1-.1,.1-.3,0-.1,0-.2-.1-.3Z"></path>
+                        <path d="M7.8,18.3H.1c-.1,0-.1,.1-.1,.3s0,.3,.1,.3H7.8c.1,0,.1-.1,.1-.3,0-.1,0-.2-.1-.3Z"></path>
+                        <path d="M7.8,22.3H3.5c-.1,0-.1,.1-.1,.3s0,.3,.1,.3H7.8c.1,0,.1-.1,.1-.3,0-.1,0-.2-.1-.3Z"></path>
+                        <circle r="1.6" cy="26.2" cx="20.5"></circle>
+                        <circle r="1.6" cy="26.2" cx="48"></circle>
+                        <path d="M54,12.2c-.2-.3-.4-.5-.7-.7-1.4-1.6-2.4-3.5-3-5.6,0-.1-.1-.2-.3-.2h-9V2.3c0-1.2-1-2.3-2.2-2.3H11.8c-1.2,0-2.3,1-2.3,2.2V24.5c0,1.2,1,2.3,2.2,2.3h4.2c.3,2.3,2.3,4,4.6,4s4.3-1.8,4.6-4.1h13.6c.7,0,1.4-.3,1.8-.9v.4c0,.1,.1,.3,.2,.3h2.7c.2,2.5,2.4,4.5,4.9,4.3,2.3-.2,4.1-2,4.3-4.3q.1,.1,.2,.1h4.9c.1,0,.3-.1,.3-.2v-.1c.2-9.7-2-12-4-14.1ZM20.5,30.2c-2.2,0-4-1.8-4-4s1.8-4,4-4,4,1.8,4,4-1.8,4-4,4ZM31.3,12.8c-1.5,2.4-3.5,4.4-5.9,6q0,.1-.1,.1c-.1,0-.1-.1-.2-.1-2.3-1.6-4.4-3.6-5.9-6-1.2-1.5-1.2-3.6-.2-5.2,.9-1.1,2.3-1.6,3.7-1.3,1.2,.3,2.2,1.3,2.6,2.5,.3-1.2,1.2-2.1,2.4-2.5,1.4-.3,2.8,.2,3.7,1.3,1,1.3,1,3.2-.1,5.2Zm16.7,17.4c-2.2,0-4-1.8-4-4s1.8-4,4-4,4,1.8,4,4-1.8,4-4,4Zm-3.6-14v-6.2h7.1c.4,.6,.8,1.2,1.3,1.8,.2,.3,.5,.5,.8,.7h0c1.1,1.1,2,2.3,2.6,3.7h-11.8Z"></path>
+                    </svg>
+                    <p><strong>Free delivery</strong> over €39*</p>
+                </a>
+            </div>
+            <div class="benefit-box">
+                <a href="#free-product">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M15.94,17l-.48-.09a3,3,0,0,1-2.36-2.52,3,3,0,0,1,0-.42V11.52c.21,0,.41,0,.61,0a.35.35,0,0,0,.36-.19,8.81,8.81,0,0,1,.78-1,1.79,1.79,0,0,1,1.61-.5l2.26.32a6.7,6.7,0,0,0,.89,0,.69.69,0,0,0,.74-.84,5.42,5.42,0,0,0-.14-.7,1.21,1.21,0,0,0,0-.14,2.39,2.39,0,0,1,1.76,1,2.62,2.62,0,0,1,.27,2h.64c.1,0,.13,0,.13.13,0,.82,0,1.65,0,2.47a2.89,2.89,0,0,1-1.58,2.49,2.85,2.85,0,0,1-1.19.36.32.32,0,0,0-.09,0Zm-1.52-5.49h7.2c.1,0,.14,0,.15-.12,0-.24.06-.49.06-.73A1.75,1.75,0,0,0,21,9.2l-.26-.14c0,.2,0,.37,0,.54a1,1,0,0,1-.78.91,3.22,3.22,0,0,1-.93.05c-.87-.1-1.74-.23-2.61-.34a1.48,1.48,0,0,0-1.07.19A3.54,3.54,0,0,0,14.42,11.51Z"></path><path d="M1,9.78h.42A12.22,12.22,0,0,1,1.8,6.84h.43V6.2c0-.13,0-.27,0-.41a.14.14,0,0,1,.07-.11l2-.61s0,0,.07,0c0,.2,0,.4,0,.6a.09.09,0,0,1,0,.07.64.64,0,0,0-.41.59c0,.17,0,.34,0,.52a1,1,0,0,0,.25,0c.15,0,.21,0,.23.18.09.61.19,1.23.27,1.84,0,.26,0,.52,0,.78a1,1,0,0,0,0,.15h.37v6.88c0,.15-.06.2-.19.21L3.54,17l-.17,0H2.73c-.2,0-.41,0-.61,0L1,16.83Zm.84,0H4.25s0,0,0-.07A13.41,13.41,0,0,0,4,7.35c0-.1-.07-.11-.16-.11H2.27c-.13,0-.18,0-.19.15-.06.5-.14,1-.19,1.49A8.72,8.72,0,0,0,1.84,9.78Z"></path><path d="M8.62,17c0-1.08,0-2.17,0-3.25a.49.49,0,0,0,0-.16,1.81,1.81,0,0,1-.16-.42c-.07-.8-.11-1.59-.16-2.38C8.16,9.67,8.09,8.56,8,7.45A4.47,4.47,0,0,0,7.65,6a.67.67,0,0,0-.13-.22c-.24-.22-.14-.49-.16-.75H12v.52a.09.09,0,0,1,0,.06,2.11,2.11,0,0,0-.49,1.16c-.1.61-.16,1.23-.21,1.85-.07.8-.11,1.61-.16,2.41s-.09,1.37-.14,2.06a.79.79,0,0,1-.18.51.22.22,0,0,0-.05.14V17Zm1.73-.43a.09.09,0,0,0,0-.05c0-.92,0-1.85,0-2.78,0-.1-.06-.1-.13-.1h-1c-.14,0-.17,0-.17.17v2.62s0,.1,0,.15Z"></path></g></svg>
+                    <p><strong>A FREE travel-size product of your choice</strong> when you spend €59</p>
+                </a>
+            </div>
+            <div class="benefit-box">
+                <a href="#loyalty-program">
+                    <svg xml:space="preserve" style="enable-background:new 0 0 60 60;" viewBox="0 0 60 60" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+                        <g>
+                            <path d="M30,23.3L30,23.3c0-0.7-0.2-1.2-0.6-1.6s-1-0.6-1.6-0.6l0,0c0,0.6,0.2,1.2,0.6,1.6C28.8,23,29.4,23.3,30,23.3z" class="st0"></path>
+                            <rect height="6.9" width="6.9" class="st0" y="31.4" x="23.1"></rect>
+                            <path d="M32.9,21L32.9,21c-0.6,0-1.2,0.2-1.6,0.6s-0.6,1-0.6,1.6l0,0c0.6,0,1.2-0.2,1.6-0.6
+                                C32.6,22.2,32.9,21.6,32.9,21z" class="st0"></path>
+                            <rect height="6.9" width="6.9" class="st0" y="23.9" x="23.1"></rect>
+                            <path d="M35.8,46l-1.4,0.6l1.7,4.3l1.4-0.6c1.3-0.5,1.9-1.8,1.4-3C38.4,46,37.2,45.5,35.8,46z" class="st0"></path>
+                            <polygon points="43,45.2 40.8,44 41.4,46.4" class="st0"></polygon>
+                            <polygon points="23.6,48.9 25.4,49.4 25.1,47" class="st0"></polygon>
+                            <path d="M30,5C16.2,5,5,16.2,5,30s11.2,25,25,25s25-11.2,25-25S43.8,5,30,5z M51.9,26.7l-0.6,0.1l-0.6-2.5l-1.9,0.5
+                                l0.6,2.4l-0.6,0.1l-0.6-2.4l-2,0.5l0.6,2.6l-0.6,0.1l-0.8-3.2l5.6-1.3L51.9,26.7z M49.9,20.5l0.3,0.5L45,23.5L44.7,23L49.9,20.5z
+                                M47.6,16.6l-4.2,3.1l1.3,1.8l-0.5,0.3l-1.7-2.3l4.7-3.4L47.6,16.6z M43.7,12.6l-1.6,6.2l-0.5-0.4l0.5-1.8l-1.9-1.5L38.5,16
+                                L38,15.6L43.7,12.6L43.7,12.6z M35.1,8.4l2,0.7c1.7,0.6,2.5,2.2,1.9,3.8s-2.2,2.3-3.9,1.7l-2-0.7L35.1,8.4z M28.1,8l0.1,3.4
+                                c0,1.1,0.7,1.8,1.8,1.8c1.1,0,1.7-0.8,1.7-1.9l-0.1-3.4h0.6l0.1,3.4c0,1.5-0.9,2.5-2.3,2.5s-2.3-1-2.4-2.4L27.5,8H28.1z M29.8,21.2
+                                c0.2,0.2,0.4,0.5,0.5,0.8c0.1-0.3,0.3-0.5,0.5-0.8c0.6-0.6,1.4-0.9,2.4-0.8h0.2v0.2c0,0.1,0,0.2,0,0.3c0,0.8-0.3,1.5-0.8,2
+                                c-0.1,0.1-0.2,0.1-0.3,0.2H38v15.6H22.5V23.3h5.7c-0.1-0.1-0.2-0.1-0.3-0.2c-0.6-0.6-0.9-1.4-0.8-2.4v-0.2h0.2
+                                C28.3,20.3,29.2,20.6,29.8,21.2z M23,9h0.1l4.3,4.8L26.7,14l-1.2-1.4l-2.3,0.8L23,15.2l-0.6,0.2L23,9z M16.9,12.2
+                                c0.6-0.4,1.1-0.7,1.7-0.8l0.4,0.5c-0.7,0.1-1.2,0.3-1.8,0.7c-1.1,0.9-1.3,2.3-0.4,3.4c0.9,1.1,2.3,1.3,3.4,0.4
+                                c0.5-0.4,0.9-0.8,1.1-1.6l0.4,0.5c-0.2,0.4-0.5,1-1.2,1.5c-1.4,1.1-3.2,0.9-4.3-0.5C15.2,15,15.5,13.3,16.9,12.2z M11.2,18.3h3
+                                l-0.9-2.9l0.4-0.6l1.1,3.6l2.2,1.7l-0.4,0.5l-2.2-1.7h-3.7L11.2,18.3z M8.1,25.8l3.6-1.5L9.6,21v-0.1l5.6,1.8L15,23.2l-4.2-1.3
+                                l1.7,2.6v0.1l-2.9,1.2l4.2,1.3l-0.2,0.6L8,26L8.1,25.8z M10,39.8l-0.2-0.6l4.1-1.4L11,36.7v-0.1l1.6-2.7l-4.1,1.4l-0.2-0.6l5.5-1.9
+                                v0.1l-2,3.4l3.7,1.4v0.1L10,39.8z M13.2,44.5L12.8,44l2.1-1.8l0.9-3.6l0.5,0.6l-0.7,2.9l3-0.2l0.5,0.5l-3.7,0.2L13.2,44.5z
+                                M18.7,48.5c0.6,0.4,1.1,0.5,1.8,0.6l-0.4,0.5c-0.5,0-1.1-0.2-1.8-0.6c-1.5-1-1.9-2.7-0.9-4.2c0.9-1.4,2.7-1.7,4.2-0.8
+                                c0.6,0.4,1,0.9,1.3,1.4L22.5,46c-0.3-0.6-0.7-1.1-1.2-1.4c-1.2-0.8-2.6-0.5-3.3,0.6C17.2,46.3,17.5,47.7,18.7,48.5z M25.8,51.9
+                                L25.5,50l-2.4-0.7L22,50.8l-0.6-0.2l4.1-4.9h0.1l0.8,6.3L25.8,51.9z M30.5,52.3c-1.4,0-2.3-0.9-2.4-2.4L28,46.5h0.6l0.1,3.4
+                                c0,1.1,0.7,1.8,1.8,1.8c1,0,1.7-0.8,1.7-1.9l-0.1-3.4h0.6l0.1,3.4C32.8,51.2,31.9,52.2,30.5,52.3z M37.7,50.8l-2,0.8l-2.1-5.4
+                                l2-0.8c1.7-0.6,3.3,0,3.9,1.6C40.1,48.6,39.4,50.2,37.7,50.8z M45.1,46.3l-1.6-0.9L41.6,47l0.5,1.8l-0.5,0.4L39.9,43l0.1-0.1l5.6,3
+                                L45.1,46.3z M46.8,44.6L42.2,41l0.4-0.5l4.1,3.2L48,42l0.4,0.4L46.8,44.6z M49.4,40.7L44.3,38l0.3-0.5l5.1,2.7L49.4,40.7z
+                                M50.9,37.5L45.3,36l0.9-3.1l0.5,0.2L46,35.6l1.9,0.5l0.7-2.4l0.5,0.2l-0.7,2.4l2,0.6l0.7-2.6l0.5,0.2L50.9,37.5z" class="st0"></path>
+                            <polygon points="23.4,10.3 23.2,12.7 25.1,12.1" class="st0"></polygon>
+                            <path d="M38.5,12.7c0.5-1.3-0.1-2.5-1.5-3l-1.5-0.5l-1.6,4.4l1.5,0.5C36.7,14.5,38,14,38.5,12.7z" class="st0"></path>
+                            <polygon points="42.8,13.6 40.7,14.8 42.2,16" class="st0"></polygon>
+                            <rect height="6.9" width="6.9" class="st0" y="23.9" x="30.6"></rect>
+                            <rect height="6.9" width="6.9" class="st0" y="31.4" x="30.6"></rect>
+                        </g>
+                    </svg>
+                    <p><strong>MYCAUDALIE loyalty program</strong> 100 points = 1 gift</p>
+                </a>
+            </div>
+            <div class="benefit-box">
+                <a href="#exclusive-offers">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M21.42,23.21H2.56V4.32h6.8a3.75,3.75,0,0,1-1-1.57A3.89,3.89,0,0,1,8.2.86,3.48,3.48,0,0,1,12,2.7a3.2,3.2,0,0,1,1.15-1.34A3.7,3.7,0,0,1,15.62.85a.3.3,0,0,1,.18.2,3.41,3.41,0,0,1-1.19,3.18s0,0,0,.07h6.83Zm-9.08-9.68V5.18h-.7v8.35H3.3v.73h8.34v8.33h.71V14.25h8a1,1,0,0,0,.24,0c.06,0,.14-.09.14-.14a5.56,5.56,0,0,0,0-.58Zm2.75-12a2.59,2.59,0,0,0-2.71,2.75A2.6,2.6,0,0,0,15.09,1.54Zm-6.2,0a2.57,2.57,0,0,0,2.7,2.73A2.59,2.59,0,0,0,8.89,1.55Z"></path></g></svg>
+                    <p><strong>Exclusive offers</strong> all year round</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-right">
+            <h4>Let’s be grape friends</h4>
+            <input type="email" placeholder="Your email address..." />
+            <button>OK</button>
+            <ul class="social-icons">
+                <li><svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M44.03,8.43H15.98c-4.16,0-7.55,3.39-7.55,7.55v28.05c0,4.16,3.39,7.55,7.55,7.55h28.05c4.16,0,7.55-3.39,7.55-7.55V15.98c0-4.16-3.39-7.55-7.55-7.55Zm6.75,35.6c0,3.72-3.03,6.75-6.75,6.75H15.98c-3.72,0-6.75-3.03-6.75-6.75V15.98c0-3.72,3.03-6.75,6.75-6.75h28.05c3.72,0,6.75,3.03,6.75,6.75v28.05Z" class="cls-1"></path><path d="M29.58,20.83c-6.23,0-11.3,5.07-11.3,11.3s5.07,11.3,11.3,11.3,11.3-5.07,11.3-11.3-5.07-11.3-11.3-11.3Z" class="cls-1"></path><path d="M42.37,13.29c-2.3,0-4.17,1.87-4.17,4.17s1.87,4.17,4.17,4.17,4.17-1.87,4.17-4.17-1.87-4.17-4.17-4.17Z" class="cls-1"></path></svg></li>
+                <li><svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M39.15,14.87c.11,0,.22-.03,.3-.1,.08-.08,.13-.18,.13-.29,0-.18,.05-4.51,0-5.53,0-.2-.17-.36-.37-.38-2.06-.16-8.34-.66-12.08,2.79-1.92,1.77-2.89,4.34-2.89,7.62v4.9h-7.28c-.22,0-.4,.18-.4,.4v5.05c0,.22,.18,.4,.4,.4h7.37v21.46c0,.11,.04,.21,.12,.28,.08,.07,.18,.12,.28,.12h6.9c.22,0,.4-.18,.4-.4V29.71h7.08c.22,0,.4-.18,.4-.4v-5.02c0-.22-.18-.4-.4-.4h-7.1c-.04-1.15-.15-4.57,.01-5.73,.32-2.16,1.05-3.78,7.11-3.29Z" class="cls-1"></path></svg></li>
+                <li><svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M46.72,10.1H13.28C6.97,10.1,1.84,15.23,1.84,21.54v16.92c0,6.31,5.13,11.44,11.44,11.44H46.72c6.31,0,11.44-5.13,11.44-11.44V21.54c0-6.31-5.13-11.44-11.44-11.44Zm10.7,28.36c0,5.9-4.8,10.7-10.7,10.7H13.28c-5.9,0-10.7-4.8-10.7-10.7V21.54c0-5.9,4.8-10.7,10.7-10.7H46.72c5.9,0,10.7,4.8,10.7,10.7v16.92Z" class="cls-1"></path><path d="M23.35,17.99c-.11-.07-.26-.07-.37,0-.12,.06-.19,.19-.19,.32v22.38c0,.13,.07,.25,.19,.32,.06,.03,.12,.05,.18,.05s.13-.02,.19-.05l18.86-11.07c.11-.07,.18-.19,.18-.32,0-.13-.07-.25-.18-.32l-18.86-11.32Z" class="cls-1"></path></svg></li>
+                <li><svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M42.41,8.45H17.59c-5.04,0-9.14,4.1-9.14,9.14v24.82c0,5.04,4.1,9.14,9.14,9.14h24.82c5.04,0,9.14-4.1,9.14-9.14V17.59c0-5.04-4.1-9.14-9.14-9.14Zm8.34,33.96c0,4.6-3.74,8.34-8.34,8.34H17.59c-4.6,0-8.34-3.74-8.34-8.34V17.59c0-4.6,3.74-8.34,8.34-8.34h24.82c4.6,0,8.34,3.74,8.34,8.34v24.82Z" class="cls-1"></path><path d="M42.41,21.52c-2.75-.24-4.11-1.34-4.99-2.27-.84-.88-1.35-3.3-1.48-4.16-.03-.2-.2-.34-.4-.34h-4.75c-.11,0-.21,.04-.28,.12s-.12,.18-.12,.28c.02,6.69,.05,19.5,0,20.12-.06,.67-1.09,3.05-3.75,3.05-1.23,0-2.3-.66-2.93-1.81-.72-1.29-.72-2.86,0-4.01,1.36-2.19,3.88-1.59,3.98-1.56,.12,.03,.25,0,.34-.07,.1-.08,.16-.19,.16-.32v-4.96c0-.21-.16-.38-.37-.4-3.04-.21-6.21,1.04-8.27,3.28-2.12,2.32-2.78,5.25-1.99,8.98,.61,2.88,2.47,4.45,3.82,5.38,1.51,1.04,3.23,1.64,4.97,1.72,.14,0,.28,0,.42,0,1.27,0,2.65-.26,3.92-.76,1.54-.59,3.04-1.85,4.01-3.37,1.56-2.43,1.59-5.67,1.59-5.81v-9.09c2.59,1.81,5.96,1.66,6.12,1.65,.21-.01,.38-.19,.38-.4v-4.89c0-.21-.16-.38-.37-.4Z" class="cls-1"></path></svg></li>
+                <li><svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M48.91,6.12H11.09c-2.75,0-4.97,2.23-4.97,4.97V48.91c0,2.75,2.23,4.97,4.97,4.97H48.91c2.75,0,4.97-2.23,4.97-4.97V11.09c0-2.75-2.23-4.97-4.97-4.97ZM20.64,47.18c0,.8-.65,1.45-1.45,1.45h-5.18c-.8,0-1.45-.65-1.45-1.45V25.02c0-.8,.65-1.45,1.45-1.45h5.18c.8,0,1.45,.65,1.45,1.45v22.16Zm-3.96-25.37c-2.89,0-5.24-2.35-5.24-5.24s2.35-5.24,5.24-5.24,5.24,2.35,5.24,5.24-2.35,5.24-5.24,5.24Zm31.86,12.47v13.45c0,.53-.43,.95-.95,.95h-6.25c-.53,0-.95-.43-.95-.95v-13.32c0-.07,0-.61-.02-1.11-.02-.57-.88-3.38-4.02-3.31-3.15,.07-4,2.3-4.29,4.19l-.02,13.54c0,.54-.44,.97-.97,.97h-5.87c-.53,0-.95-.43-.95-.95V24.34s0-.77,.79-.77l5.96,.05c.52,0,.95,.42,.95,.95l.02,2.43,.95-1.38c.73-.84,1.36-1.36,2.63-1.86,1.42-.56,4.43-.79,7.43,.19,5.87,1.91,5.56,10.33,5.56,10.33Z" class="cls-1"></path><svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M42.41,8.45H17.59c-5.04,0-9.14,4.1-9.14,9.14v24.82c0,5.04,4.1,9.14,9.14,9.14h24.82c5.04,0,9.14-4.1,9.14-9.14V17.59c0-5.04-4.1-9.14-9.14-9.14Zm8.34,33.96c0,4.6-3.74,8.34-8.34,8.34H17.59c-4.6,0-8.34-3.74-8.34-8.34V17.59c0-4.6,3.74-8.34,8.34-8.34h24.82c4.6,0,8.34,3.74,8.34,8.34v24.82Z" class="cls-1"></path><path d="M42.41,21.52c-2.75-.24-4.11-1.34-4.99-2.27-.84-.88-1.35-3.3-1.48-4.16-.03-.2-.2-.34-.4-.34h-4.75c-.11,0-.21,.04-.28,.12s-.12,.18-.12,.28c.02,6.69,.05,19.5,0,20.12-.06,.67-1.09,3.05-3.75,3.05-1.23,0-2.3-.66-2.93-1.81-.72-1.29-.72-2.86,0-4.01,1.36-2.19,3.88-1.59,3.98-1.56,.12,.03,.25,0,.34-.07,.1-.08,.16-.19,.16-.32v-4.96c0-.21-.16-.38-.37-.4-3.04-.21-6.21,1.04-8.27,3.28-2.12,2.32-2.78,5.25-1.99,8.98,.61,2.88,2.47,4.45,3.82,5.38,1.51,1.04,3.23,1.64,4.97,1.72,.14,0,.28,0,.42,0,1.27,0,2.65-.26,3.92-.76,1.54-.59,3.04-1.85,4.01-3.37,1.56-2.43,1.59-5.67,1.59-5.81v-9.09c2.59,1.81,5.96,1.66,6.12,1.65,.21-.01,.38-.19,.38-.4v-4.89c0-.21-.16-.38-.37-.4Z" class="cls-1"></path></svg></svg></li>
+            </ul>
+            <p>By registering, you authorize Caudalie to use your email address to send you newsletters and to retain it as part of its Personal Data Protection Policy.</p>
+        </div>
+        <div class="footer-left">
+            <div class="footer-column">
+                <h4>Order online</h4>
+                <ul class="hidden-phone">
+                    <li>Track my order</li>
+                    <li>My account</li>
+                    <li>My orders</li>
+                    <li>MYCAUDALIE points</li>
+                    <li>Free shipping</li>
+                    <li>Return policy</li>
+                    <li>Payment options</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul class="hidden-phone">
+                    <li>Loyalty program</li>
+                    <li>Skin diagnosis</li>
+                    <li>Find a store</li>
+                    <li>Find an event</li>
+                    <li>eGift Card</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>About Caudalie</h4>
+                <ul class="hidden-phone">
+                    <li>Our story</li>
+                    <li>1% for the planet</li>
+                    <li>Recruitment & Careers</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Need help?</h4>
+                <ul class="hidden-phone">
+                    <li>FAQ</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+        </div>
+        
+
+    </div>
+    <!-- <div data-v-2d66f0cb="" class="w-full mb-6">
+        <div data-v-19ecc2d7="" _uid="abc4ceba-a154-4835-bf4c-9bc8f99755d1" data-cms-component="FooterBottomLinks" class="">
+            <ul class="flex flex-wrap items-center justify-center">
+                <li class="px-3 my-1">
+                    <div>
+                        <button type="button" class="flex items-center" data-testid="LocaleSelector-button" aria-haspopup="dialog" aria-controls="locale-selector-modal" aria-expanded="false">
+                            <img alt="" loading="lazy" decoding="async" data-nuxt-img="" srcset="/icons/langs/international.svg?auto=format,compress&amp;cs=srgb 1x, /icons/langs/international.svg?auto=format,compress&amp;cs=srgb 2x" class="w-6 h-6" src="/icons/langs/international.svg?auto=format,compress&amp;cs=srgb">
+                            <p class="ml-2 text-sm">International</p>
+                            <span data-v-f16c5aba="" aria-hidden="true" class="leading-none lowercase select-none font-icon text-xl relative top-[0.125rem]" focusable="false">icon_selectb</span>
+                        </button>
+                    </div>
+                </li>
+                <li class="px-3 my-1 border-l-2 whitespace-nowrap">
+                    <a href="#" class="cookie">Personal data &amp; Cookies</a>
+                </li> -->
+    <div class="last-supper">
+        <ul class="last-list">
+            <li><img id="flag" src="lastsupper/World_Flag_(2004).svg.png" alt="flag">International ▼</li>
+            <li> Peronal data & Cookies</li>
+            <li> T&C</li>
+            <li> Legal Note </li>
+            <li> MYCAUDALIE </li>
+            <li> © Caudalie Copyright </li>
+        </ul>
+    </div>        
+    
+    
+</body>
+</html>
