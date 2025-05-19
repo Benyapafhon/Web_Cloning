@@ -360,7 +360,7 @@ body {
 }
 
 
-
+/* 
 .carousel {
     background: #fff;
     max-width: 100%;
@@ -392,7 +392,7 @@ body {
     width: 100%;
     object-fit: cover;
     object-position: center center;
-}
+} */
 
 
 
@@ -438,7 +438,7 @@ body {
     height: auto;
 }
 
-#img-hover:hover {
+.promo-img-com:hover {
     opacity: 0.8;
     transition-duration:0.2s, 2s, 0.2s; 
     transition-timing-function: ease-out, ease-in, ease-out;
@@ -554,6 +554,13 @@ body {
     flex-direction: column;
 }
 
+@media (max-width: 426px) {
+    .promo-img img{
+        padding: 5em;
+        height: 615px;
+    }
+}
+
 
 
 .promo-content h3 {
@@ -601,42 +608,7 @@ body {
 }
 
 
-/* ===============test================== */
 
-/* .shop-code h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    font-weight: 400;
-}
-
-.shop-code p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: #000;
-}
-
-.shop-code strong {
-    font-weight: bold;
-}
-
-.shop-now-button {
-    border: .5px solid rgba(45, 25, 70, .3);
-    border-radius: 5px;
-    text-align: center;
-    padding: 10px 20px;
-    
-} */
-
-/* .shop-now-button:hover {
-    background-color: #ffffff;
-    color: #2d1946;
-    border-color: #2d1946;
-    }
-
-#shop-now-txt {
-    margin: 0;
-    font-size: 14px;
-}  */
 
 .grape-power-left button {
     /* padding: 20px 15px; */
@@ -1438,14 +1410,13 @@ ul.social-icons li{
     border-right: none;
 }
 
-@media (min-width: 426px) {
-    .last-supper{
+@media (max-width: 426px) {
+    .last-list{
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         flex-wrap: wrap;
-        align-items: center;
-        flex-wrap: wrap;
-?
         padding: 0 1em;
         max-width: 1200px;
         margin: 0 auto; 
