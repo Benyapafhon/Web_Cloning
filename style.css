@@ -719,6 +719,10 @@ body {
     .grape-power .grape-power-left  {
         padding: 0;
     }
+
+    .grape-power .grape-power-right {
+        margin-left: 0;
+    }
 }
 
 hr {
